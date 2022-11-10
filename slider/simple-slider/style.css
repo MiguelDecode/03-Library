@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: slategray;
+}
+
+.slider {
+  background-image: url("https://placeimg.com/640/480/animals");
+  background-size: cover;
+  width: 40rem;
+  height: 30rem;
+  border: 0.5rem solid white;
+  border-radius: 1rem;
+  animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+  25% {
+    background-image: url("https://placeimg.com/640/480/arch");
+  }
+  50% {
+    background-image: url("https://placeimg.com/640/480/nature");
+  }
+  75% {
+    background-image: url("https://placeimg.com/640/480/people");
+  }
+  100% {
+    background-image: url("https://placeimg.com/640/480/animals");
+  }
+}
