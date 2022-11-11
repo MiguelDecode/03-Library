@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  min-height: 100vh;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 50%;
+}
+
+.wrapper__investigator {
+  border: 3px solid white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+tool-tip {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 2px solid white;
+  color: white;
+
+  top: 30%;
+  left: 50%;
+
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+:has(> tool-tip) {
+  position: relative;
+}
+
+:has(> tool-tip):hover tool-tip{
+  opacity: 1;
+}
