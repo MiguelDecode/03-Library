@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button with an animation</title>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        min-height: 100vh;
+      }
+
+      .btn {
+        border: 0;
+        background-image: linear-gradient(150deg, #9500ff, #09f, #00ddff);
+        border-radius: 0.5rem;
+        color: white;
+        display: flex;
+        font-size: 1.125rem;
+        padding: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn__span {
+        background-color: #111;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        transition: 0.3s;
+      }
+
+      .btn:hover span {
+        background: none;
+      }
+
+      .btn:active {
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">
+      <span class="btn__span">Subscribe</span>
+    </button>
+  </body>
+</html>
